@@ -1,0 +1,21 @@
+management:
+  server:
+    port: ${PORT_METRICS:8081}
+  endpoints:
+    web:
+      base-path: /
+server:
+  port: ${PORT_APP:8080}
+  servlet:
+    context-path: /@project.artifactId@
+project:
+  version: @project.version@
+spring:
+  application:
+    name: @project.artifactId@
+  cloud:
+    config:
+      enabled: false
+      uri: ${CONFIG_SERVER_URI:http://config-server:8080}
+      label: ${spring.application.name}
+      fail-fast: true

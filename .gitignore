@@ -1,0 +1,10 @@
+.classpath
+.project
+target/
+bin/
+.settings/
+.idea/
+*.iml
+.swagger-codegen/
+.openapi-generator/
+src/main/java/**/dto
